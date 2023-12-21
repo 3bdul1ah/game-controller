@@ -20,10 +20,9 @@ void readMPU6050Data() {
   // Request data starting from register 0x3B (ACCEL_XOUT_H)
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x3B);
-  Wire.endTransmission(false); // End transmission but maintain connection
-  Wire.requestFrom(MPU_ADDR, 14, true); // Request 14 bytes from MPU-6050
-
-  // Read accelerometer and gyroscope data
+  Wire.endTransmission(false); 
+  Wire.requestFrom(MPU_ADDR, 14, true); 
+  
   AcX = Wire.read() << 8 | Wire.read();
   AcY = Wire.read() << 8 | Wire.read();
   AcZ = Wire.read() << 8 | Wire.read();
@@ -36,7 +35,6 @@ void readMPU6050Data() {
 void loop() {
   readMPU6050Data();
 
-  // Print accelerometer and gyroscope data
   Serial.print(","); Serial.print(AcX); 
   Serial.print(","); Serial.print(AcY);
   Serial.print(","); Serial.print(AcZ);
@@ -44,5 +42,5 @@ void loop() {
   Serial.print(","); Serial.print(GyY);
   Serial.print(","); Serial.println(GyZ);
 
-  delay(500); // Delay for half a second
+  delay(500);
 }
