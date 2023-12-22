@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "Ahmed-home@GIGABIT FIBER";
-const char* password = "AoA.0187731709";
+const char* ssid = "";
+const char* password = "";
 const char* mqtt_broker = "broker.emqx.io";
 const int mqtt_port = 1883;
 const char* clientId = "ESP32";
