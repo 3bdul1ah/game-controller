@@ -10,7 +10,7 @@ To summarize:
 `mqtt-bm-latency` measures MQTT broker latency.
 To measure the latency of your ESP32 code and the MQTT broker combined, you need to implement timestamping and latency calculation in your ESP32 code and use `mqtt-bm-latency` to measure the entire system's latency.
 
-### Overall Latency = Latency Introduced by ESP32 Code + Latency Introduced by MQTT Broker
+####  Overall Latency = Latency Introduced by ESP32 Code + Latency Introduced by MQTT Broker
 
 Command Line:
 - `go install github.com/hui6075/mqtt-bm-latency@latest`
